@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 
 var CLOUD_WIDTH = 420;
 var CLOUD_HEIGHT = 270;
@@ -59,4 +59,4 @@ var renderHistogram = function (ctx, player, time, maxTime, index) {
   ctx.fillStyle = '#000';
   ctx.fillText(Math.round(time), x, y - GAP);
   ctx.fillText(player, x, 100 + MAX_BAR_HEIGHT + FONT_GAP);
-}
+};
