@@ -2,11 +2,9 @@ var CLOUD_WIDTH = 420;
 var CLOUD_HEIGHT = 270;
 var CLOUD_X = 100;
 var CLOUD_Y = 10;
-var GAP = 10; // отступ
+var GAP = 10;
 var FONT_GAP = 15;
-var BAR_GAP = 50; // размер отступа
-var BAR_WIDTH = 50; // ширина колонки
-var TEXT_WIDTH = 40; // ширина текста
+var BAR_WIDTH = 50;
 var MAX_BAR_HEIGHT = 150;
 
 var renderCloud = function (ctx, x, y, color) {
