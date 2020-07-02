@@ -20,7 +20,6 @@ var getRandomArrayElement = function (array) {
   return array[randomValue];
 }
 
-
 var wizards = [];
 
 for (var i = 0; i < 4; i++) {
@@ -43,3 +42,5 @@ for (var i = 0; i < wizards.length; i++) {
   wizardElement.querySelector('.wizard-eyes').style.fill = wizards[i].eyesColor;
   similarListElement.appendChild(wizardElement);
 };
+
+/* Понять, что можно сделать еще, как можно оптимизировать скрипт */
