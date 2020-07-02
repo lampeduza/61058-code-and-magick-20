@@ -7,29 +7,29 @@ var EYES_COLOR = ['black', 'red', 'blue', 'yellow'];
 
 var wizards = [
   {
-    name: NAMES[0],
-    surname: SURNAMES[0],
+    name: getRandomArrayElement(NAMES),
+    surname: getRandomArrayElement(SURNAMES),
     coatColor: COAT_COLOR[0],
     eyesColor: EYES_COLOR[0]
   },
 
   {
-    name: NAMES[1],
-    surname: SURNAMES[1],
+    name: getRandomArrayElement(NAMES),
+    surname: getRandomArrayElement(SURNAMES),
     coatColor: COAT_COLOR[1],
     eyesColor: EYES_COLOR[1]
   },
 
   {
-    name: NAMES[2],
-    surname: SURNAMES[2],
+    name: getRandomArrayElement(NAMES),
+    surname: getRandomArrayElement(SURNAMES),
     coatColor: COAT_COLOR[2],
     eyesColor: EYES_COLOR[2]
   },
 
   {
-    name: NAMES[3],
-    surname: SURNAMES[3],
+    name: getRandomArrayElement(NAMES),
+    surname: getRandomArrayElement(SURNAMES),
     coatColor: COAT_COLOR[3],
     eyesColor: EYES_COLOR[3]
   }
@@ -43,6 +43,12 @@ var similarListElement = document.querySelector('.setup-similar-list');
 var similarWizardTemplate = document.querySelector('#similar-wizard-template')
   .content
   .querySelector('.setup-similar-item');
+
+var getRandomArrayElement = function (array) {
+  var randomValue = [Math.floor(Math.random() * array.length)];
+
+  return array[randomValue];
+}
 
 for (var i = 0; i < wizards.length; i++) {
   var wizardElement = similarWizardTemplate.cloneNode(true);
