@@ -20,6 +20,15 @@ var getRandomArrayElement = function (array) {
   return array[randomValue];
 }
 
+var renderWizard = function (wizard) {
+  var wizardElement = similarWizardTemplate.cloneNode(true);
+  wizardElement.querySelector('.setup-similar-label').textContent = wizards[i].name + ' ' + wizards[i].surname;
+  wizardElement.querySelector('.wizard-coat').style.fill = wizards[i].coatColor;
+  wizardElement.querySelector('.wizard-eyes').style.fill = wizards[i].eyesColor;
+
+  return wizardElement;
+};
+
 var wizards = [];
 
 for (var i = 0; i < 4; i++) {
@@ -36,11 +45,6 @@ for (var i = 0; i < 4; i++) {
 var fragment = document.createDocumentFragment();
 
 for (var i = 0; i < wizards.length; i++) {
-  var wizardElement = similarWizardTemplate.cloneNode(true);
-  wizardElement.querySelector('.setup-similar-label').textContent = wizards[i].name + ' ' + wizards[i].surname;
-  wizardElement.querySelector('.wizard-coat').style.fill = wizards[i].coatColor;
-  wizardElement.querySelector('.wizard-eyes').style.fill = wizards[i].eyesColor;
-  similarListElement.appendChild(wizardElement);
+  fragment.appendChild(renderWizard(wizards[i]));
+  similarListElement.appendChild(fragment);
 };
-
-/* Понять, что можно сделать еще, как можно оптимизировать скрипт */
