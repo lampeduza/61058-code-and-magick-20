@@ -32,14 +32,12 @@ var renderWizard = function (wizard) {
 var wizards = [];
 
 for (var i = 0; i < 4; i++) {
-  var wizard = {
+  wizards[i] = {
     name: getRandomArrayElement(NAMES),
     surname: getRandomArrayElement(SURNAMES),
     coatColor: getRandomArrayElement(COAT_COLOR),
     eyesColor: getRandomArrayElement(EYES_COLOR)
   };
-
-  wizards[i] = wizard;
 }
 
 var fragment = document.createDocumentFragment();
