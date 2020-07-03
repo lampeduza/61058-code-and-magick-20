@@ -15,16 +15,16 @@ var similarWizardTemplate = document.querySelector('#similar-wizard-template')
   .querySelector('.setup-similar-item');
 
 var getRandomArrayElement = function (array) {
-  var randomValue = [Math.floor(Math.random() * array.length)];
+  var randomValue = (Math.floor(Math.random() * array.length));
 
   return array[randomValue];
-}
+};
 
 var renderWizard = function (wizard) {
   var wizardElement = similarWizardTemplate.cloneNode(true);
-  wizardElement.querySelector('.setup-similar-label').textContent = wizards[i].name + ' ' + wizards[i].surname;
-  wizardElement.querySelector('.wizard-coat').style.fill = wizards[i].coatColor;
-  wizardElement.querySelector('.wizard-eyes').style.fill = wizards[i].eyesColor;
+  wizardElement.querySelector('.setup-similar-label').textContent = wizard.name + ' ' + wizard.surname;
+  wizardElement.querySelector('.wizard-coat').style.fill = wizard.coatColor;
+  wizardElement.querySelector('.wizard-eyes').style.fill = wizard.eyesColor;
 
   return wizardElement;
 };
@@ -44,7 +44,8 @@ for (var i = 0; i < 4; i++) {
 
 var fragment = document.createDocumentFragment();
 
-for (var i = 0; i < wizards.length; i++) {
-  fragment.appendChild(renderWizard(wizards[i]));
-  similarListElement.appendChild(fragment);
-};
+for (var j = 0; j < wizards.length; j++) {
+  fragment.appendChild(renderWizard(wizards[j]));
+}
+
+similarListElement.appendChild(fragment);
