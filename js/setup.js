@@ -1,3 +1,5 @@
+'use strict';
+
 var setup = document.querySelector('.setup');
 var setupOpen = document.querySelector('.setup-open');
 var setupClose = setup.querySelector('.setup-close');
@@ -44,14 +46,13 @@ setupClose.addEventListener('keydown', function (evt) {
 
 // Задание № 2. Валидация ввода имени персонажа
 
+var userNameInput = document.querySelector('.setup-user-name');
 
+userNameInput.addEventListener('invalid', function () {
 
+});
 
-
-
-
-
-
+console.log(userNameInput.validity);
 
 
 
