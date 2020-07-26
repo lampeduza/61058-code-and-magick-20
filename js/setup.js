@@ -1,11 +1,11 @@
 var setup = document.querySelector('.setup');
 var setupOpen = document.querySelector('.setup-open');
 var setupClose = setup.querySelector('.setup-close');
-var setupUserName = document.querySelector('.setup-user-name');
+
 
 var onPopupEscPress = function (evt) {
-  if (evt.key === 'Escape') {
-    evt.preventDefalut();
+  console.log(evt);
+  if (evt.key === 'Escape' && evt.target.className !== 'setup-user-name') {
     closePopup();
   }
 };
@@ -41,3 +41,35 @@ setupClose.addEventListener('keydown', function (evt) {
     closePopup();
   }
 });
+
+// Задание № 2. Валидация ввода имени персонажа
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
